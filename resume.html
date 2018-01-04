@@ -73,21 +73,18 @@
                                     <tr v-for="project in projects">
                                       <td>{{project['year']}}</td>
                                       <td>{{project.desc}}</td>
-                                      <td>
+                                      <td class="center-check">
                                         <img v-if="Object.keys(project.req).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                        <span v-for="item in project.req">{{item}} </span>
                                       </td>
                                       <td>
                                         <img v-if="Object.keys(project.dev).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
                                         <span v-for="item in project.dev">{{item}} </span>
                                       </td>
-                                      <td>
+                                      <td class="center-check">
                                         <img v-if="Object.keys(project.test).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                        <span v-for="item in project.test">{{item}} </span>
                                       </td>
-                                      <td>
+                                      <td class="center-check">
                                         <img v-if="Object.keys(project.pm).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                        <span v-for="item in project.pm">{{item}} </span>
                                       </td>
                                       <td>{{project.other}}</td>
                                         <!-- <td v-for="(value, key) in project">
@@ -105,85 +102,50 @@
                         </div>
                         <!--// .yui-gf Projects -->
 
+
                         <div class="yui-gf">
-
-                            <div class="yui-u first">
-                                <h2>Education</h2>
-                            </div>
-                            <!--// .yui-u -->
-
-                            <div class="yui-u">
-
-                                <div class="job">
-                                    <h2>University of Virginia</h2>
-                                    <h3>BS Electrical Engineering</h3>
-                                    <h4>1999-2004</h4>
-                                    <p>Concentration in Diginal Systems, including CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
-                                    </p>
-                                </div>
-
-                                <div class="job last">
-                                    <h2>International Business Machines (IBM)</h2>
-                                    <h3>Lead Web Designer</h3>
-                                    <h4>2001-2004</h4>
-                                    <p>Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely
-                                        e-markets.
-                                    </p>
-                                </div>
-
-                            </div>
-                            <!--// .yui-u -->
-                        </div>
-                        <!--// .yui-gf Education -->
-
-
-                        <div class="yui-gf last">
                             <div class="yui-u first">
                                 <h2>Education</h2>
                             </div>
                             <div class="yui-u">
+                              <div class="edu">
                                 <h2>University of Virginia - BS Electrical Engineering</h2>
                                 <p>Concentration in Diginal Systems, included CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
                                 </p>
+                              </div>
                             </div>
-                            <div class="yui-u">T</div>
                             <div class="yui-u">
+                              <div class="edu edu-last">
                                 <h2>North Carolina State University - Continuing Ed</h2>
                                 <p>Courses included: Data​ ​Structures​ & ​Algorithms (Java), Computer Networks, Technology Entrepreneurship, Change Management for Engineers
                                 </p>
-                            </div>
-                            <div class="yui-u">
-                                <h2>Computer Programming Self-Study</h2>
-                                <p>Coursera, Udemy, tutorials, with topics like: Python, VueJS, Data Science, Flask, Django, Celery, Ansible
-                                </p>
+                              </div>
                             </div>
                         </div>
                         <!--// .yui-gf Education -->
 
 
-                        <div class="yui-gf">
+                        <!-- <div class="yui-gf">
                             <div class="yui-u first">
                                 <h2>Skills</h2>
                             </div>
                             <div class="yui-u">
-
                                 <div class="talent">
-                                    <h2>Web Design</h2>
-                                    <p>Assertively exploit wireless initiatives rather than synergistic core competencies. </p>
+                                  <h2>Topic</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                 </div>
 
                                 <div class="talent">
-                                    <h2>Interface Design</h2>
-                                    <p>Credibly streamline mission-critical value with multifunctional functionalities. </p>
+                                  <h2>Topic</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                 </div>
 
                                 <div class="talent">
-                                    <h2>Project Direction</h2>
-                                    <p>Proven ability to lead and manage a wide variety of design and development projects in team and independent situations.</p>
+                                  <h2>Topic</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                                 </div>
                             </div>
-                        </div>
-                        <!--// .yui-gf -->
+                        </div> -->
 
                         <div class="yui-gf">
                             <div class="yui-u first">
@@ -191,27 +153,31 @@
                             </div>
                             <div class="yui-u">
                                 <ul class="talent">
-                                    <li>XHTML</li>
-                                    <li>CSS</li>
-                                    <li class="last">Javascript</li>
+                                    <li>Python</li>
+                                    <li>Flask</li>
+                                    <li>Linux</li>
+                                    <li class="last">VueJS</li>
                                 </ul>
 
                                 <ul class="talent">
-                                    <li>Jquery</li>
-                                    <li>PHP</li>
-                                    <li class="last">CVS / Subversion</li>
+                                    <li>MongoDB</li>
+                                    <li>Django</li>
+                                    <li>Celery</li>
+                                    <li class="last">Bootstrap</li>
                                 </ul>
 
                                 <ul class="talent">
-                                    <li>OS X</li>
-                                    <li>Windows XP/Vista</li>
-                                    <li class="last">Linux</li>
+                                    <li>Ansible</li>
+                                    <li>git</li>
+                                    <li>Splunk</li>
+                                    <li class="last">REST</li>
                                 </ul>
+
                             </div>
                         </div>
                         <!--// .yui-gf-->
 
-                        <div class="yui-gf">
+                        <div class="yui-gf last">
 
                             <div class="yui-u first">
                                 <h2>Experience</h2>
@@ -221,53 +187,71 @@
                             <div class="yui-u">
 
                                 <div class="job">
-                                    <h2>Facebook</h2>
-                                    <h3>Senior Interface Designer</h3>
-                                    <h4>2005-2007</h4>
-                                    <p>Intrinsicly enable optimal core competencies through corporate relationships. Phosfluorescently implement worldwide vortals and client-focused imperatives. Conveniently initiate virtual paradigms and top-line convergence.
+                                    <h2>Software​ ​Developer</h2>
+                                    <h3>Self-Study</h3>
+                                    <h4>Feb 2017 - Present</h4>
+                                    <p>Studying​ ​computer​ ​programming​ ​courses​ ​to​ ​supplement​ ​my​ ​university​ ​dev​ ​classes​.​ ​
+                                      Focusing​ ​on​ ​full-stack,​ ​with​ ​skills/tools​ ​of:
+                                      Python, Flask,​ ​MongoDB, VueJS,​ ​Bootstrap,​ ​Nginx/Gunicorn,​ ​Ansible,​ ​REST,​ Ubuntu,  ​
+                                      AWS,​ ​vim/tmux,​ ​vagrant, git, VueJS, Data Science, Django, Celery
                                     </p>
                                 </div>
 
                                 <div class="job">
-                                    <h2>Apple Inc.</h2>
-                                    <h3>Senior Interface Designer</h3>
-                                    <h4>2005-2007</h4>
-                                    <p>Progressively reconceptualize multifunctional "outside the box" thinking through inexpensive methods of empowerment. Compellingly morph extensive niche markets with mission-critical ideas. Phosfluorescently deliver
-                                        bricks-and-clicks strategic theme areas rather than scalable benefits. </p>
+                                    <h2>Technical Project​ ​Manager​</h2>
+                                    <h3>​Johns​ ​Hopkins​ ​Medicine</h3>
+                                    <h4>Mar 2015 - Sep 2016</h4>
+                                    <!-- Assisted in roll-out of EMR System, Desktop Integration, & Voice Recognition App. -->
+                                    <p>
+                                      As "hands-on" PM, I went beyond task-tracking to
+                                      interview end-users for technical needs, maintain test environments for integration,
+                                      troubleshoot new vendor builds,
+                                      coordinate​ install ​across​ all teams (VM, Desktop, Cloud, Network Security, LDAP, SSO, devs, vendor),
+                                      production troubleshooting on go-live.
+                                    </p>
                                 </div>
 
                                 <div class="job">
-                                    <h2>Microsoft</h2>
-                                    <h3>Principal and Creative Lead</h3>
-                                    <h4>2004-2005</h4>
-                                    <p>Intrinsicly transform flexible manufactured products without excellent intellectual capital. Energistically evisculate orthogonal architectures through covalent action items. Assertively incentivize sticky platforms
-                                        without synergistic materials. </p>
+                                    <h2>Product Owner + Devops</h2>
+                                    <h3>itMD</h3>
+                                    <h4>Jun 2013 - Dec 2015</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
                                 </div>
 
+                                <div class="job">
+                                    <h2>Product Owner + Devops</h2>
+                                    <h3>Johns​ ​Hopkins​ ​Medicine</h3>
+                                    <h4>Aug 2011 - June 2013</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Web Developer</h2>
+                                    <h3>Freelance</h3>
+                                    <h4>Nov 2010 - Aug 2011</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Consultant</h2>
+                                    <h3>Accenture</h3>
+                                    <h4>Feb 2006 - Nov 2010</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                </div>
 
                                 <div class="job last">
-                                    <h2>International Business Machines (IBM)</h2>
-                                    <h3>Lead Web Designer</h3>
-                                    <h4>2001-2004</h4>
-                                    <p>Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely
-                                        e-markets.
+                                    <h2>Software Developer</h2>
+                                    <h3>Accenture</h3>
+                                    <h4>Jan 2005 - Feb 2006</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                     </p>
                                 </div>
-
                             </div>
                             <!--// .yui-u -->
-                        </div>
-                        <!--// .yui-gf -->
-
-
-                        <div class="yui-gf last">
-                            <div class="yui-u first">
-                                <h2>Education</h2>
-                            </div>
-                            <div class="yui-u">
-                                <h2>Indiana University - Bloomington, Indiana</h2>
-                                <h3>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong> </h3>
-                            </div>
                         </div>
                         <!--// .yui-gf -->
 
@@ -286,7 +270,6 @@
 
         </div>
         <!-- // inner -->
-        <button @click="result">Click for Alert</button>
     </div>
 
     <script type="text/javascript">
@@ -297,9 +280,8 @@
         },
         mounted() {
             // force MIME type for getting local json
-            $.ajaxSetup({beforeSend: function(xhr){
-              if (xhr.overrideMimeType)
-              {
+            $.ajaxSetup({beforeSend: function(xhr) {
+              if (xhr.overrideMimeType) {
                 xhr.overrideMimeType("application/json");
               }
             }
@@ -309,13 +291,6 @@
             $.getJSON("projects.json", function(data) {
               self.projects = data;
             });
-        },
-        methods: {
-          result: function() {
-            console.log(this.projects[0].desc)
-            // return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5'
-            return
-          }
         }
       })
     </script>

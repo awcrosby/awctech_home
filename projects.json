@@ -2,7 +2,7 @@
     {
 		"year": "2006",
 		"desc": "Census Prototype Mobile App",
-		"dev": ["C#, Clearcase"],
+		"dev": ["C#"],
 		"req": [],
 		"test": [],
 		"pm": [],
@@ -15,7 +15,7 @@
 		"req": [""],
 		"test": [""],
 		"pm": [],
-		"other": "Troubleshooting"
+		"other": ""
 	},
   {
     "year": "2010",
@@ -55,7 +55,7 @@
   },
   {
     "year": "2014",
-    "desc": "TBD ____ creation (via NC State course)",
+    "desc": "Hash Table Spell Checker (via NC State course)",
     "dev": ["Java"],
     "req": [],
     "test": [],
@@ -69,7 +69,7 @@
     "req": [],
     "test": [""],
     "pm": [""],
-    "other": "Coordinate new app across 7 IT teams"
+    "other": ""
   },
   {
     "year": "2017",
@@ -88,14 +88,5 @@
     "test": [""],
     "pm": [],
     "other": "Task mgmt w/ Celery"
-  },
-  {
-    "year": "2018",
-    "desc": "_____, and ____ projects (via Udacity Nanodegree)",
-    "dev": [""],
-    "req": [],
-    "test": [""],
-    "pm": [],
-    "other": ""
   }
 ]
