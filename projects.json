@@ -1,0 +1,101 @@
+[
+    {
+		"year": "2006",
+		"desc": "Census Prototype Mobile App",
+		"dev": ["C#, Clearcase"],
+		"req": [],
+		"test": [],
+		"pm": [],
+		"other": ""
+	},
+	{
+		"year": "06-09",
+		"desc": "Census Production Mobile App",
+		"dev": [],
+		"req": [""],
+		"test": [""],
+		"pm": [],
+		"other": "Troubleshooting"
+	},
+  {
+    "year": "2010",
+    "desc": "Dialysis Mobile App",
+    "dev": [],
+    "req": [""],
+    "test": [],
+    "pm": [],
+    "other": ""
+  },
+  {
+    "year": "2010",
+    "desc": "E-commerce, CMS, Marketing, and Wiki Sites (Wine retail, Office rental, Taxi reservations)",
+    "dev": ["Prestashop, Drupal, MediaWiki, reactive CSS"],
+    "req": [""],
+    "test": [""],
+    "pm": [],
+    "other": ""
+  },
+  {
+    "year": "2011",
+    "desc": "Food Delivery Site",
+    "dev": ["Javascript, PHP, Google Maps API"],
+    "req": [],
+    "test": [""],
+    "pm": [],
+    "other": ""
+  },
+  {
+    "year": "12-14",
+    "desc": "Medial Imaging Web App",
+    "dev": [],
+    "req": [""],
+    "test": [""],
+    "pm": [""],
+    "other": "Ran/automated builds, log analysis / splunk, sql queries, JIRA, AWS"
+  },
+  {
+    "year": "2014",
+    "desc": "TBD ____ creation (via NC State course)",
+    "dev": ["Java"],
+    "req": [],
+    "test": [],
+    "pm": [],
+    "other": ""
+  },
+  {
+    "year": "15-16",
+    "desc": "EMR System, Desktop Integration, & Voice Recognition App",
+    "dev": [],
+    "req": [],
+    "test": [""],
+    "pm": [""],
+    "other": "Coordinate new app across 7 IT teams"
+  },
+  {
+    "year": "2017",
+    "desc": "Media Search Web App",
+    "dev": ["Flask, MongoDB, VueJS, Bootstrap"],
+    "req": [],
+    "test": [""],
+    "pm": [],
+    "other": "Config mgmt w/ Ansible"
+  },
+  {
+    "year": "2017",
+    "desc": "Jobpost Data Web App",
+    "dev": ["Django, PostgreSQL"],
+    "req": [],
+    "test": [""],
+    "pm": [],
+    "other": "Task mgmt w/ Celery"
+  },
+  {
+    "year": "2018",
+    "desc": "_____, and ____ projects (via Udacity Nanodegree)",
+    "dev": [""],
+    "req": [],
+    "test": [""],
+    "pm": [],
+    "other": ""
+  }
+]

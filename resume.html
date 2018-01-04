@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> -->
+    <link rel="stylesheet" type="text/css" href="yui_font_grids.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+
+    <script src="https://unpkg.com/vue"></script>
+    <!-- TODO change to VueJS Prod: <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div id="doc2" class="yui-t7">
+        <div id="inner">
+
+            <div id="hd">
+                <div class="yui-gc">
+                    <div class="yui-u first">
+                        <h1>Andrew Crosby</h1>
+                        <h2>Software Developer</h2>
+                    </div>
+
+                    <div class="yui-u">
+                        <div class="contact-info">
+                            <h3><a id="pdf" href="#">Download PDF</a></h3>
+                            <h3><a href="mailto:andrew@awctech.com">andrew@awctech.com</a></h3>
+                            <!-- <h3>(###) - ###-###</h3> -->
+                        </div>
+                        <!--// .contact-info -->
+                    </div>
+                </div>
+                <!--// .yui-gc -->
+            </div>
+            <!--// hd -->
+
+            <div id="bd">
+                <div id="yui-main">
+                    <div class="yui-b">
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Profile</h2>
+                            </div>
+                            <div class="yui-u">
+                                <p class="enlarge">
+                                    Software developer with broad IT experience: requirements, coding, product owner, managing devs/testers, running builds, client interaction. Discovered that my passion is with coding and currently building up my skills. Goal: to build deep coding skills on a dev team.
+                                </p>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Profile -->
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Projects</h2>
+                            </div>
+                            <div style="clear: both; padding: 10px 0px 5px 0px;">
+                              <!-- Technical projects I have worked on, and type of work involved: -->
+                            </div>
+                            <div class="yui-u proj-table">
+                                <table>
+                                    <tr>
+                                      <th>Year</th> <th>Project Name</th>
+                                      <th>Req</th> <th>Dev</th> <th>Test</th> <th>PM</th>
+                                      <th>Other/Notes</th>
+                                    </tr>
+                                    <tr v-for="project in projects">
+                                      <td>{{project['year']}}</td>
+                                      <td>{{project.desc}}</td>
+                                      <td>
+                                        <img v-if="Object.keys(project.req).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                        <span v-for="item in project.req">{{item}} </span>
+                                      </td>
+                                      <td>
+                                        <img v-if="Object.keys(project.dev).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                        <span v-for="item in project.dev">{{item}} </span>
+                                      </td>
+                                      <td>
+                                        <img v-if="Object.keys(project.test).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                        <span v-for="item in project.test">{{item}} </span>
+                                      </td>
+                                      <td>
+                                        <img v-if="Object.keys(project.pm).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                        <span v-for="item in project.pm">{{item}} </span>
+                                      </td>
+                                      <td>{{project.other}}</td>
+                                        <!-- <td v-for="(value, key) in project">
+                                          <span v-if="key.startsWith('check')">
+                                            <img v-if="Object.keys(value).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                            <span v-for="item in value">{{item}} </span>
+                                          </span>
+                                          <span v-else>
+                                            {{value}}
+                                          </span>
+                                        </td> -->
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Projects -->
+
+                        <div class="yui-gf">
+
+                            <div class="yui-u first">
+                                <h2>Education</h2>
+                            </div>
+                            <!--// .yui-u -->
+
+                            <div class="yui-u">
+
+                                <div class="job">
+                                    <h2>University of Virginia</h2>
+                                    <h3>BS Electrical Engineering</h3>
+                                    <h4>1999-2004</h4>
+                                    <p>Concentration in Diginal Systems, including CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
+                                    </p>
+                                </div>
+
+                                <div class="job last">
+                                    <h2>International Business Machines (IBM)</h2>
+                                    <h3>Lead Web Designer</h3>
+                                    <h4>2001-2004</h4>
+                                    <p>Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely
+                                        e-markets.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <!--// .yui-u -->
+                        </div>
+                        <!--// .yui-gf Education -->
+
+
+                        <div class="yui-gf last">
+                            <div class="yui-u first">
+                                <h2>Education</h2>
+                            </div>
+                            <div class="yui-u">
+                                <h2>University of Virginia - BS Electrical Engineering</h2>
+                                <p>Concentration in Diginal Systems, included CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
+                                </p>
+                            </div>
+                            <div class="yui-u">T</div>
+                            <div class="yui-u">
+                                <h2>North Carolina State University - Continuing Ed</h2>
+                                <p>Courses included: Data​ ​Structures​ & ​Algorithms (Java), Computer Networks, Technology Entrepreneurship, Change Management for Engineers
+                                </p>
+                            </div>
+                            <div class="yui-u">
+                                <h2>Computer Programming Self-Study</h2>
+                                <p>Coursera, Udemy, tutorials, with topics like: Python, VueJS, Data Science, Flask, Django, Celery, Ansible
+                                </p>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Education -->
+
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Skills</h2>
+                            </div>
+                            <div class="yui-u">
+
+                                <div class="talent">
+                                    <h2>Web Design</h2>
+                                    <p>Assertively exploit wireless initiatives rather than synergistic core competencies. </p>
+                                </div>
+
+                                <div class="talent">
+                                    <h2>Interface Design</h2>
+                                    <p>Credibly streamline mission-critical value with multifunctional functionalities. </p>
+                                </div>
+
+                                <div class="talent">
+                                    <h2>Project Direction</h2>
+                                    <p>Proven ability to lead and manage a wide variety of design and development projects in team and independent situations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// .yui-gf -->
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Technical</h2>
+                            </div>
+                            <div class="yui-u">
+                                <ul class="talent">
+                                    <li>XHTML</li>
+                                    <li>CSS</li>
+                                    <li class="last">Javascript</li>
+                                </ul>
+
+                                <ul class="talent">
+                                    <li>Jquery</li>
+                                    <li>PHP</li>
+                                    <li class="last">CVS / Subversion</li>
+                                </ul>
+
+                                <ul class="talent">
+                                    <li>OS X</li>
+                                    <li>Windows XP/Vista</li>
+                                    <li class="last">Linux</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--// .yui-gf-->
+
+                        <div class="yui-gf">
+
+                            <div class="yui-u first">
+                                <h2>Experience</h2>
+                            </div>
+                            <!--// .yui-u -->
+
+                            <div class="yui-u">
+
+                                <div class="job">
+                                    <h2>Facebook</h2>
+                                    <h3>Senior Interface Designer</h3>
+                                    <h4>2005-2007</h4>
+                                    <p>Intrinsicly enable optimal core competencies through corporate relationships. Phosfluorescently implement worldwide vortals and client-focused imperatives. Conveniently initiate virtual paradigms and top-line convergence.
+                                    </p>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Apple Inc.</h2>
+                                    <h3>Senior Interface Designer</h3>
+                                    <h4>2005-2007</h4>
+                                    <p>Progressively reconceptualize multifunctional "outside the box" thinking through inexpensive methods of empowerment. Compellingly morph extensive niche markets with mission-critical ideas. Phosfluorescently deliver
+                                        bricks-and-clicks strategic theme areas rather than scalable benefits. </p>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Microsoft</h2>
+                                    <h3>Principal and Creative Lead</h3>
+                                    <h4>2004-2005</h4>
+                                    <p>Intrinsicly transform flexible manufactured products without excellent intellectual capital. Energistically evisculate orthogonal architectures through covalent action items. Assertively incentivize sticky platforms
+                                        without synergistic materials. </p>
+                                </div>
+
+
+                                <div class="job last">
+                                    <h2>International Business Machines (IBM)</h2>
+                                    <h3>Lead Web Designer</h3>
+                                    <h4>2001-2004</h4>
+                                    <p>Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely
+                                        e-markets.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <!--// .yui-u -->
+                        </div>
+                        <!--// .yui-gf -->
+
+
+                        <div class="yui-gf last">
+                            <div class="yui-u first">
+                                <h2>Education</h2>
+                            </div>
+                            <div class="yui-u">
+                                <h2>Indiana University - Bloomington, Indiana</h2>
+                                <h3>Dual Major, Economics and English &mdash; <strong>4.0 GPA</strong> </h3>
+                            </div>
+                        </div>
+                        <!--// .yui-gf -->
+
+
+                    </div>
+                    <!--// .yui-b -->
+                </div>
+                <!--// yui-main -->
+            </div>
+            <!--// bd -->
+
+            <div id="ft">
+                <p>Jonathan Doe &mdash; <a href="mailto:name@yourdomain.com">name@yourdomain.com</a> &mdash; (313) - 867-5309</p>
+            </div>
+            <!--// footer -->
+
+        </div>
+        <!-- // inner -->
+        <button @click="result">Click for Alert</button>
+    </div>
+
+    <script type="text/javascript">
+      new Vue({
+        el: '#doc2',
+        data: {
+          projects: []
+        },
+        mounted() {
+            // force MIME type for getting local json
+            $.ajaxSetup({beforeSend: function(xhr){
+              if (xhr.overrideMimeType)
+              {
+                xhr.overrideMimeType("application/json");
+              }
+            }
+            });
+
+            var self = this;  // closure to access instance in callback
+            $.getJSON("projects.json", function(data) {
+              self.projects = data;
+            });
+        },
+        methods: {
+          result: function() {
+            console.log(this.projects[0].desc)
+            // return this.counter > 5 ? 'Greater than 5' : 'Smaller than 5'
+            return
+          }
+        }
+      })
+    </script>
+
+</body>
+
+</html>
