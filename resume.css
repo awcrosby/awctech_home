@@ -85,3 +85,5 @@ th { font-weight: bold; }
 
 .icon { width: 10px; height: 10px; padding-left: 1px; }
 p.enlarge { padding-right: 2em; }
+
+th.role { width: 40px; }

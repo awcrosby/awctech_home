@@ -51,7 +51,7 @@
     "req": [""],
     "test": [""],
     "pm": [""],
-    "other": "Ran/automated builds, log analysis / splunk, sql queries, JIRA, AWS"
+    "other": "JIRA, Splunk, SQL, AWS, bash script for builds"
   },
   {
     "year": "2014",
@@ -73,20 +73,20 @@
   },
   {
     "year": "2017",
-    "desc": "Media Search Web App",
+    "desc": "Watchlst.com - media search / user watchlist",
     "dev": ["Flask, MongoDB, VueJS, Bootstrap"],
     "req": [],
     "test": [""],
     "pm": [],
-    "other": "Config mgmt w/ Ansible"
+    "other": "Ansible"
   },
   {
-    "year": "2017",
+    "year": "2018",
     "desc": "Jobpost Data Web App",
     "dev": ["Django, PostgreSQL"],
     "req": [],
     "test": [""],
     "pm": [],
-    "other": "Task mgmt w/ Celery"
+    "other": "Celery"
   }
 ]
