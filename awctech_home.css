@@ -2,14 +2,14 @@ body { margin: 0; background-color: #eef; }
 
 .clearfix:after { content: '';  clear: both;  display: table; }
 
-nav { height: 35px; margin-top: 15px; font-weight: 600; font-family: Verdana, sans-serif; }   /* TODO trytan */
+nav { height: 35px; margin-top: 15px; font-weight: 600; font-family: Verdana, sans-serif; }
 nav a { margin: 10px; padding: 10px; text-decoration: none; }
 nav a:hover { background-color: #bbb; }
 a:active { color: blue; }
 header img { width: 100%; height: 100%; }
 
 /* container for main content under image */
-.container { padding: 0 20px; max-width: 1000px; margin: auto; }
+.container { padding: 0 20px; max-width: 950px; margin: auto; }
 
 #title { margin-bottom: 3px;
   font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif }
@@ -20,17 +20,74 @@ h2 { font-family: Arial, Book Antiqua, Georgia, serif; }
 #projects { width: 100%; }
 #projects .proj-articles { display: flex; flex-wrap: wrap; }
 #projects article { width: 100%; padding-top: 10px; text-align: center; }  /* mobile 1 column */
-#projects article img { width: 300px; height: 225px; }
-article a { text-decoration: none; }
+#projects article p { margin-top: 5px; padding: 0 15px; }
+#projects article img { width: 300px; border: solid black; border-radius: 12px; border-width: 3px; }
+#projects article img:hover { border-color: blue; }
 @media screen and (min-width: 800px) { /* media queries */
   #projects article { width: 50%; }
-  #projects article img { width: 400px; height: 300px;}
+  #projects article img { width: 400px; }
 }
 /* @media screen and (min-width: 700px) {
   #projects article { width: 33%; }
   #projects article img { width: 150px}
 } */
 
-/* try rounded corner border around projects */
-/* TODO eliminate whitespace margin around resume, make container 950, try border */
-#resume { width: 1000px; height: 2500px; margin: 0 auto; display: block; }
+/* TODO check modal performance on mobile, make media queries to make images visible,
+maybe put padding on article to have p line up with img 475width.. make side margins of 75/2, change on mobile? */
+#resume { width: 950px; margin: 0 auto; display: block; }
+footer { min-height: 40px; }
+
+
+/* ////////////////////////////////////////// */
+/* Modal CSS from https://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/ -- */
+/* ////////////////////////////////////////// */
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+  text-align: center;
+}
+.modalDialog:target { opacity:1; pointer-events: auto; }
+.modalDialog div img { margin: 0 auto; }
+.modalDialog > div {
+	width: 990px;
+	position: relative;
+	margin: 20px auto;
+	padding: 5px 20px 5px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 35px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 34px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+
+  font-size: 1.5em;
+}
+.close:hover { background: #00d9ff; }
