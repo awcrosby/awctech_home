@@ -80,6 +80,7 @@ body { background-color: #eef; }
 #hd { margin: 2.5em 0 2em 0; }
 #bd, #ft { margin-bottom: 0em; }
 .job p { margin: 0.5em 0 1em 0; }
+.job li { border: none; list-style-type: disc; margin-left: 12px; line-height: 18px }
 .talent { width: 24%; float: left }
 
 .edu { position: relative; margin-bottom: 1em; padding-bottom: 1em; border-bottom: 1px solid #ccc; }
