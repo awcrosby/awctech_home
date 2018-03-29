@@ -21,11 +21,11 @@ h2 { font-family: Arial, Book Antiqua, Georgia, serif; }
 #projects .proj-articles { display: flex; flex-wrap: wrap; }
 #projects article { width: 100%; padding-top: 10px; text-align: center; }  /* mobile 1 column */
 #projects article p { margin-top: 5px; padding: 0 15px; }
-#projects article img { width: 300px; border: solid black; border-radius: 12px; border-width: 3px; }
+#projects article img { width: 300px; height: 225px; border: solid black; border-radius: 12px; border-width: 3px; }
 #projects article img:hover { border-color: blue; }
 @media screen and (min-width: 800px) { /* media queries */
   #projects article { width: 50%; }
-  #projects article img { width: 400px; }
+  #projects article img { width: 400px; height: 300px;}
 }
 /* @media screen and (min-width: 700px) {
   #projects article { width: 33%; }
