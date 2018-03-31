@@ -75,7 +75,6 @@ a#pdf:hover { background: #222; }
 /* ////////////////////////////////////////// */
 /* OVERRIDES+ADDITIONS TO RESUME TEMPLATE -- */
 /* ////////////////////////////////////////// */
-body { background-color: #eef; }
 #inner { margin: 0 auto; border-width: 8px 1px 3px 1px; }
 #hd { margin: 2.5em 0 2em 0; }
 #bd, #ft { margin-bottom: 0em; }

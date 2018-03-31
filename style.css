@@ -2,8 +2,9 @@ body { margin: 0; background-color: #eef; }
 
 .clearfix:after { content: '';  clear: both;  display: table; }
 
-nav { height: 35px; margin-top: 15px; font-weight: 600; font-family: Verdana, sans-serif; }
-nav a { margin: 10px; padding: 10px; text-decoration: none; }
+nav { height: 35px; padding-top: 15px; font-weight: 600; font-family: Verdana, sans-serif; }
+nav a { margin: 10px; padding: 10px; text-decoration: none; color: white; }
+nav { background-color: #555; }
 nav a:hover { background-color: #bbb; }
 a:active { color: blue; }
 header img { width: 100%; height: 100%; }
@@ -23,7 +24,7 @@ h2 { font-family: Arial, Book Antiqua, Georgia, serif; }
 #projects article p { margin-top: 5px; padding: 0 15px; }
 #projects article img { width: 300px; height: 225px; border: solid black; border-radius: 12px; border-width: 3px; }
 #projects article img:hover { border-color: blue; }
-@media screen and (min-width: 800px) { /* media queries */
+@media screen and (min-width: 1000px) { /* media queries */
   #projects article { width: 50%; }
   #projects article img { width: 400px; height: 300px;}
 }
@@ -34,7 +35,7 @@ h2 { font-family: Arial, Book Antiqua, Georgia, serif; }
 
 /* TODO check modal performance on mobile, make media queries to make images visible,
 maybe put padding on article to have p line up with img 475width.. make side margins of 75/2, change on mobile? */
-#resume { width: 950px; margin: 0 auto; display: block; }
+#resume-frame { width: 950px; margin: 0 auto; display: block; }
 footer { min-height: 40px; }
 
 
