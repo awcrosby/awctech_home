@@ -1,78 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html>
+
 <head>
-
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css" media="all" />
   <title>awctech.com</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-
-  <style>
-    img { max-width: 100%; max-height: 100%; /*height: 200px;*/ }
-    #photo { max-width: 1000px; margin: 0 auto; display: block; }
-    #intro_list { width: 60%; margin: 0 auto; display: block; }
-    .resume { width: 1000px; height: 2500px; margin: 0 auto; display: block; }
-  </style>
-
 </head>
 
 <body>
-  <div class="container" style="width:100%">
-    <div id="photo">
-      <!-- <img src="img/waterfall.jpg" alt="nature photo"> -->
-      <img src="awctech_home/img/blacksand.jpg" alt="nature photo">
-      <!-- <img src="img/sheep.jpg" alt="nature photo"> -->
-    </div>
-    <div id="intro_list">
-      <ul>
-        <li><a href="https://media.awctech.com">Media Search Project</a> - find where a movie/show is streaming + create personalized watchlist with sources displayed</li>
-        <ul>
-          <li>Stack: Linux, Nginx/Gunicorn, MongoDB, Python/Flask</li>
-        </ul>
-        <li><a href="http://www.linkedin.com/in/awcrosby">LinkedIn profile</a></li>
-        <li><a href="https://github.com/awcrosby">Github profile</a></li>
-        <li><strong>Key courses/tutorials:</strong>
-          <ul>
-            <li>
-              <a href="https://www.coursera.org/learn/python-data">Python Data Structures (Coursera)</a>
-              <small><a href="https://www.coursera.org/account/accomplishments/verify/TF4AD3XJLFHL">cert</a></small>
-            </li>
-            <li>
-              <a href="https://www.coursera.org/learn/python-data-analysis">Intro to Data Science in Python (Coursera)</a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/watch?v=zRwy8gtgJ1A">Python Flask From Scratch (tutorial)</a>
-            </li>
-            <li>
-              <a href="https://www.udemy.com/vuejs-2-the-complete-guide/">Vue.js 2 - The Complete Guide (Udemy)</a>
-              <small><a href="https://www.udemy.com/certificate/UC-GORBWB4P/">cert</a></small>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <hr>
-      <ul>
-        <li>Wiki Pages</li>
-        <ul>
-          <li><a href="http://awctech.com/wiki/Linux_Basics">Linux Basics</a></li>
-          <li><a href="http://awctech.com/wiki/Dev_and_Admin_Tools">Dev and Admin Tools</a></li>
-          <li><a href="http://awctech.com/wiki/Lost_River_Cabin">Lost River West Virginia Cabin</a></li>
-        </ul>
-      </ul>
-    </div>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#resume-header">Resume</a>
+    <a href="http://awctech.com/wiki" target="_blank">Wiki</a>
+  </nav>
+  <header><img src="img/blacksand.jpg" alt="nature photo"></header>
 
+  <div class="container">
+    <h1 id="title">Andrew Crosby - Software Developer</h1>
+    <p id="profiles">
+      <a href="https://github.com/awcrosby" target="_blank">Github Profile</a>
+      <a href="https://www.linkedin.com/in/awcrosby/" target="_blank">LinkedIn Profile</a>
+    </p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     <hr>
-    <iframe class="resume" src="resume.html" frameborder="0" scrolling="no"></iframe>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="proj-articles">
+        <article>
+          <a href="https://watchlst.com"><img src="img/proj_watchlst.png" alt="Screenshot of watchlst.com"></a>
+          <!-- <p>User creates a watchlist of movies and tv shows, allows search for media and displays streaming sources. Watchlist media can be filtered on the front end.</p> -->
+          <p><a href="https://watchlst.com">watchlst.com</a> - User creates watchlist of movies and tv shows, filter watchlist by streaming sources. Stack: Linux, Nginx/Gunicorn, MongoDB, Python/Flask</p>
+        </article>
+        <article>
+          <a href="http://34.214.201.88:8000"><img src="img/proj_jobpost.png" width="400px" height="300px" alt="Screenshot of jobpost site"></a>
+          <p>Jobpost django site using celery to manage manual and scheduled tasks, displays searchable jobpost data for US cities.</p>
+        </article>
+        <article>
+          <img src="https://www.gstatic.com/webp/gallery3/2_webp_ll.png" width="400px" height="300px" alt="">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </article>
+        <article>
+          <a href="collab.html"><img src="img/proj_collab.png" alt="Screenshots of collaborative projects"></a>
+          <p>Collaborative projects: mobile census, e-commerce, delivery mapping, procedure tracking</p>
+        </article>
+      </div>
+    </section>
+
+    <h2 id="resume-header">Resume</h2>
+    <iframe id="resume" src="resume.html"
+      onload="this.style.height=this.contentDocument.body.scrollHeight +'px';"
+      frameborder="0" scrolling="no"></iframe>
+
   </div>
 
-
-  <!-- //tech info, resume-ish
-
-
-
-    *linkedin
-    *wiki -->
+  <footer></footer>
 
 </body>
 
