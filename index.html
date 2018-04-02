@@ -2,6 +2,16 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-20691097-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-20691097-1');
+  </script>
+
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style.css" media="all" />
   <title>awctech.com</title>
@@ -47,16 +57,35 @@
     </section>
 
     <h2 id="resume">Resume</h2>
-    <iframe id="resume-frame" src="resume.html"
-      onload="this.style.height=this.contentWindow.document.body.scrollHeight +'px';"
-      frameborder="0" scrolling="no"></iframe>
-
-      <!-- onload="this.style.height=this.contentDocument.body.scrollHeight +'px';" -->
+    <iframe
+      id="myiframe"
+      src="resume.html"
+      frameborder="0"
+      scrolling="no"
+      allowtransparency="true">
+    </iframe>
 
   </div>
 
   <footer></footer>
 
 </body>
+
+<script>
+  function setIframeHeight() {
+    var iFrame = document.getElementById('myiframe');
+    console.log('iframe scrollHeight is:', iFrame.contentWindow.document.body.scrollHeight);
+    iFrame.style.height = iFrame.contentWindow.document.body.scrollHeight + 'px';
+  }
+
+  // sets iframe height multiple times, since height may change based on vuejs loading table
+  function ensureIframeHeight() {
+    setIframeHeight();
+    setTimeout(function(){ setIframeHeight(); }, 1000);
+    setTimeout(function(){ setIframeHeight(); }, 2000);
+  }
+  window.onload = ensureIframeHeight;
+
+</script>
 
 </html>

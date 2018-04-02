@@ -74,7 +74,7 @@
   {
     "year": "2017",
     "desc": "Watchlst.com - media search / user watchlist",
-    "dev": ["Python, Flask, MongoDB, VueJS, Bootstrap"],
+    "dev": ["Python, Flask/Nginx, MongoDB, VueJS, Bootstrap"],
     "req": [],
     "test": [""],
     "pm": [],

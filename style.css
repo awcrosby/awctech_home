@@ -33,9 +33,7 @@ h2 { font-family: Arial, Book Antiqua, Georgia, serif; }
   #projects article img { width: 150px}
 } */
 
-/* TODO check modal performance on mobile, make media queries to make images visible,
-maybe put padding on article to have p line up with img 475width.. make side margins of 75/2, change on mobile? */
-#resume-frame { width: 950px; margin: 0 auto; display: block; }
+iframe { top: 0; bottom: 0; left: 0; right: 0; height: auto; width: 950px; display: block; }
 footer { min-height: 40px; }
 
 
