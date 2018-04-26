@@ -52,111 +52,12 @@
                             </div>
                             <div class="yui-u">
                                 <p class="enlarge">
-                                    Software developer with broad IT experience: requirements, coding, product owner, managing devs/testers, running builds, client interaction. Discovered that my passion is with coding and currently building up my skills. Goal: to build deep coding skills on a dev team.
+                                    Discovered that my passion is with coding and currently building up my skills. Goal: to build deep coding skills on a dev team.
                                 </p>
                             </div>
                         </div>
+
                         <!--// .yui-gf Profile -->
-
-                        <div class="yui-gf">
-                            <div class="yui-u first">
-                                <h2>Projects</h2>
-                            </div>
-                            <div style="clear: both; padding: 10px 0px 5px 0px;">
-                              <!-- Technical projects I have worked on, and type of work involved: -->
-                            </div>
-                            <div class="yui-u proj-table">
-                                <table>
-                                    <tr>
-                                      <td></td>
-                                      <td></td>
-                                      <th colspan="5">Role: Requirements work, Development, Testing, Project Manager</th>
-                                    </tr>
-                                    <tr>
-                                      <th>Year</th> <th>Project Name</th>
-                                      <th class="role">Req</th>
-                                      <th>Dev</th>
-                                      <th class="role">Test</th>
-                                      <th class="role">PM</th>
-                                      <th>Other Technologies</th>
-                                    </tr>
-                                    <tr v-for="project in projects">
-                                      <td>{{project['year']}}</td>
-                                      <td>{{project.desc}}</td>
-                                      <td class="center-check">
-                                        <img v-if="Object.keys(project.req).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                      </td>
-                                      <td>
-                                        <img v-if="Object.keys(project.dev).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                        <span v-for="item in project.dev">{{item}} </span>
-                                      </td>
-                                      <td class="center-check">
-                                        <img v-if="Object.keys(project.test).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                      </td>
-                                      <td class="center-check">
-                                        <img v-if="Object.keys(project.pm).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                      </td>
-                                      <td>{{project.other}}</td>
-                                        <!-- <td v-for="(value, key) in project">
-                                          <span v-if="key.startsWith('check')">
-                                            <img v-if="Object.keys(value).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
-                                            <span v-for="item in value">{{item}} </span>
-                                          </span>
-                                          <span v-else>
-                                            {{value}}
-                                          </span>
-                                        </td> -->
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <!--// .yui-gf Projects -->
-
-
-                        <div class="yui-gf">
-                            <div class="yui-u first">
-                                <h2>Education</h2>
-                            </div>
-                            <div class="yui-u">
-                              <div class="edu">
-                                <h2>University of Virginia - BS Electrical Engineering</h2>
-                                <p>Concentration in Digital Systems, included CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
-                                </p>
-                              </div>
-                            </div>
-                            <div class="yui-u">
-                              <div class="edu slim-last">
-                                <h2>North Carolina State University - Continuing Ed</h2>
-                                <p>Courses included: Data​ ​Structures​ & ​Algorithms (Java), Computer Networks, Technology Entrepreneurship, Change Management for Engineers
-                                </p>
-                              </div>
-                            </div>
-                        </div>
-                        <!--// .yui-gf Education -->
-
-
-                        <!-- <div class="yui-gf">
-                            <div class="yui-u first">
-                                <h2>Skills</h2>
-                            </div>
-                            <div class="yui-u">
-                                <div class="talent">
-                                  <h2>Topic</h2>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-
-                                <div class="talent">
-                                  <h2>Topic</h2>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-
-                                <div class="talent">
-                                  <h2>Topic</h2>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                </div>
-                            </div>
-                        </div> -->
-
                         <div class="yui-gf">
                             <div class="yui-u first">
                                 <h2>Technologies</h2>
@@ -180,8 +81,7 @@
                                     <li>Ansible</li>
                                     <li>git</li>
                                     <li>Splunk</li>
-                                    <!-- <li>Vagrant</li> -->
-                                    <li class="last">REST</li>
+                                    <li class="last">Deep Learning</li>
                                 </ul>
 
                                 <ul class="talent">
@@ -195,10 +95,45 @@
 
                             </div>
                         </div>
-                        <!--// .yui-gf-->
+                        <!--// .yui-gf Technologies -->
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Education</h2>
+                            </div>
+                            <div class="yui-u">
+                              <div class="edu">
+                                <h2>MOOC Certificates</h2>
+                                <p>
+                                  Udacity Nanodegree:
+                                   Deep Learning (expected May 2018).
+                                  Coursera:
+                                   <a href="https://www.coursera.org/account/accomplishments/records/YT5EE3J2M6CP">Intro to Data Science</a>,
+                                   <a href="https://www.coursera.org/account/accomplishments/verify/TF4AD3XJLFHL">Python Data Structures</a>
+                                  Udemy:
+                                   <a href="https://www.udemy.com/certificate/UC-GORBWB4P/">VueJS 2 Complete Guide</a>
+                                </p>
+                              </div>
+                            </div>
+                            <div class="yui-u">
+                              <div class="edu">
+                                <h2>North Carolina State University - Continuing Ed</h2>
+                                <p>Courses included: Data​ ​Structures​ & ​Algorithms (Java), Computer Networks, Technology Entrepreneurship, Change Management for Engineers
+                                </p>
+                              </div>
+                            </div>
+                            <div class="yui-u">
+                              <div class="edu slim-last">
+                                <h2>University of Virginia - BS Electrical Engineering</h2>
+                                <p>Concentration in Digital Systems, included CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
+                                </p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Education -->
+
 
                         <div class="yui-gf slim-last">
-
                             <div class="yui-u first">
                                 <h2>Experience</h2>
                             </div>
@@ -208,11 +143,29 @@
 
                                 <div class="job">
                                     <h2>Software​ ​Developer</h2>
-                                    <h3>Self-Study</h3>
+                                    <h3>Self-Study with Certificates</h3>
                                     <h4>Feb 2017 - Present</h4>
-                                    <p>
-                                        Studying​ ​computer​ ​programming​ ​courses​ ​to​ ​supplement​ ​my​ ​university​ ​dev​ ​classes​.​ ​ Focusing​ ​on​ back-end development... Python, deep-learning, scripting, integration with 3rd-party APIs, adding AJAX updates. Using Coursera, Udacity, Udemy, turtorials, blogs.
-                                    </p>
+                                    <p>Studied for 1+ year web dev frameworks and built personal projects</p>
+                                </div>
+                                <div class="job">
+                                    <h2>Jobposts + Tasks</h2>
+                                    <h3>Personal Project</h3>
+                                    <h4>2018</h4>
+                                    <ul>
+                                      <li>Built jobpost data aggregation tool in Python, Django framework with PostgreSQL backend, and Celery - <a href="https://jobposts.awctech.com">jobposts.awctech.com</a></li>
+                                      <li>Created task management dashboard to track batch and manual tasks</li>
+                                      <li>Wrote provisioning logic for jobpost tool with Ansible and deployed on AWS</li>
+                                    </ul>
+                                </div>
+                                <div class="job">
+                                    <h2>Watchlst.com</h2>
+                                    <h3>Personal Project</h3>
+                                    <h4>2017</h4>
+                                    <ul>
+                                      <li>Built movie search app in Python, Flask, Nginx/Gunicorn, MongoDB, VueJS, Ansible - <a href="https://watchlst.com">watchlst.com</a></li>
+                                      <li>Added VueJS frontend to let user filter their watchlist by availability</li>
+                                      <li>Architected data aggregation logic with weekly batch job and API sources</li>
+                                    </ul>
                                 </div>
 
                                 <div class="job">
@@ -220,13 +173,10 @@
                                     <h3>​Johns​ ​Hopkins​ ​Medicine</h3>
                                     <h4>Mar 2015 - Sep 2016</h4>
                                     <ul>
-                                      <li>Assisted in roll-out of EMR System, Desktop Integration, & Voice Recognition App</li>
-                                      <li>As a "hands-on" PM, I went beyond task-tracking to get involved on the technical side</li>
-                                      <li>Interviewed end-users for technical needs</li>
                                       <li>Maintained test environments for integration</li>
-                                      <li>Troubleshot new vendor builds</li>
-                                      <li>Coordinate​d production install ​across​ all teams (VM, Desktop, Cloud, Network Security, LDAP, SSO, devs, vendor)</li>
-                                      <li>Production troubleshooting on go-live</li>
+                                      <li>Coordinate​d production install ​across​ teams (VM, Desktop, Cloud, Network Security, LDAP, SSO, devs)</li>
+                                      <li>Troubleshot vendor builds and production go-live</li>
+                                      <li>Successfully rolled out 3 new enterprise systems for EMR</li>
                                     </ul>
                                 </div>
 
@@ -235,12 +185,9 @@
                                     <h3>itMD</h3>
                                     <h4>Jun 2013 - Dec 2015</h4>
                                     <ul>
-                                      <li>Owned the test/build/release process, made bash script to automate upgrades</li>
-                                      <li>Spec'd new features with customers, management, and devs</li>
-                                      <li>Created test cases, docs, and configured JIRA for issue workflow</li>
-                                      <li>Created SQL queries for metrics</li>
-                                      <li>Introduced Splunk to analyze and monitor logs</li>
-                                      <li>Tested features, log analysis of java web app for bugs</li>
+                                      <li>Automated all test env upgrades with bash script</li>
+                                      <li>Wrote SQL queries for weekly metrics</li>
+                                      <li>Planned out Splunk log monitoring, JIRA workflow, and release process</li>
                                     </ul>
                                 </div>
 
@@ -249,11 +196,10 @@
                                     <h3>Johns​ ​Hopkins​ ​Medicine</h3>
                                     <h4>Aug 2011 - June 2013</h4>
                                     <ul>
-                                      <li>Built-out Image Sharing site for hospital to receive and transfer medical images</li>
-                                      <li>Coordinated maintenance of our production and test environments</li>
-                                      <li>Troubleshot application and environment issues</li>
-                                      <li>Vendor assessment across 5 companies for web application</li>
-                                      <li>Designed workflow enhancements, release planning, maintained feature roadmap</li>
+                                      <li>Configured and launched web app to store and transfer medical images</li>
+                                      <li>Maintainted production and test environments with sysadmin and dev</li>
+                                      <li>Analysis of app log files for troubleshooting</li>
+                                      <li>Responsible for vendor assessment, release planning, feature roadmap, workflow enhancements</li>
                                     </ul>
                                 </div>
 
@@ -262,9 +208,8 @@
                                     <h3>Freelance</h3>
                                     <h4>Nov 2010 - Aug 2011</h4>
                                     <ul>
-                                      <li>E-commerce PrestaShop CMS site for wine retailer</li>
-                                      <li>Google Map integration into custom PHP site for food delivery startup</li>
-                                      <li>Static marketing sites (custom, Drupal) for taxi and office advertising businesses</li>
+                                      <li>Built e-commerce sites (PrestaShop CMS), and static marketing sites (Drupal, custom)</li>
+                                      <li>Coded Google map integration into custom PHP site for food delivery startup</li>
                                     </ul>
                                 </div>
 
@@ -273,12 +218,10 @@
                                     <h3>Accenture</h3>
                                     <h4>Feb 2006 - Nov 2010</h4>
                                     <ul>
-                                      <li>Led requirement gathering effort for the 2010 US Census mobile app deployed to 120,000 devices</li>
-                                      <li>Worked closely with devs to understand technical complexity and limitations</li>
-                                      <li>Ran team of 3 direct reports for functional testing</li>
-                                      <li>Part of end-to-end deployment of 4 year solution - from prototype to implementation to field testing to live production support</li>
-                                      <li>Created strategy reports for useage/deployment/security of smart phone and tablets for clients in Telecom, Pharma, and Consumer Products</li>
-                                      <li>Specified mobile solution for data-capture by Nurses for dialysis patients</li>
+                                      <li>Lead functional designer for 2010 Census mobile app deployed to 120,000 devices</li>
+                                      <li>Liason between dev team and customer for feature enhancements</li>
+                                      <li>Ran team for functional app testing</li>
+                                      <li>Architected mobile solution for nurses, authored strategy reports for mobile devices</li>
                                     </ul>
                                 </div>
 
@@ -287,9 +230,9 @@
                                     <h3>Accenture</h3>
                                     <h4>Jan 2005 - Feb 2006</h4>
                                     <ul>
-                                      <li>Developer for business logic and front-end of native Windows smartphone app</li>
-                                      <li>Integrated with custom data-access layer. C# .NET and Sybase database</li>
-                                      <li>Helped define mapping API, integrated survey app with embedded mapping app</li>
+                                      <li>Coded business logic and front-end of native Windows smartphone app in C#</li>
+                                      <li>Integrated with custom data-access layer using Sybase database</li>
+                                      <li>Wrote mapping API doc and integrated app with embedded mapping</li>
                                     </ul>
                                 </div>
                             </div>
@@ -313,29 +256,6 @@
         </div>
         <!-- // inner -->
     </div>
-
-    <script type="text/javascript">
-      new Vue({
-        el: '#doc2',
-        data: {
-          projects: []
-        },
-        mounted() {
-            // force MIME type for getting local json
-            $.ajaxSetup({beforeSend: function(xhr) {
-              if (xhr.overrideMimeType) {
-                xhr.overrideMimeType("application/json");
-              }
-            }
-            });
-
-            var self = this;  // closure to access instance in callback
-            $.getJSON("projects.json", function(data) {
-              self.projects = data;
-            });
-        }
-      })
-    </script>
 
 </body>
 

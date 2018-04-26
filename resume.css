@@ -75,10 +75,13 @@ a#pdf:hover { background: #222; }
 /* ////////////////////////////////////////// */
 /* OVERRIDES+ADDITIONS TO RESUME TEMPLATE -- */
 /* ////////////////////////////////////////// */
+.yui-gf .yui-u { width:82%; }
+#doc2 { width: 76em; }
 #inner { margin: 0 auto; border-width: 8px 1px 3px 1px; }
 #hd { margin: 2.5em 0 2em 0; }
 #bd, #ft { margin-bottom: 0em; }
 .job p { margin: 0.5em 0 1em 0; }
+.job ul { margin: 0.5em 3em 1em 0; }
 .job li { border: none; list-style-type: disc; margin-left: 12px; line-height: 18px }
 .talent { width: 24%; float: left }
 

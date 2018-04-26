@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" /> -->
+    <link rel="stylesheet" type="text/css" href="yui_font_grids.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="resume.css" media="all" />
+
+    <script src="https://unpkg.com/vue"></script>
+    <!-- TODO change to VueJS Prod: <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div id="doc2" class="yui-t7">
+        <div id="inner">
+
+            <div id="hd">
+                <div class="yui-gc">
+                    <div class="yui-u first">
+                        <h1>Andrew Crosby</h1>
+                        <h2>Software Developer</h2>
+                    </div>
+
+                    <div class="yui-u">
+                        <div class="contact-info">
+                            <!-- <h3><a id="pdf" href="#">Download PDF</a></h3> -->
+                            <h3><a href="mailto:andrew@awctech.com" target="_blank">andrew@awctech.com</a></h3>
+                            <h3><a href="https://github.com/awcrosby" target="_blank">github.com/awcrosby</a></h3>
+                            <h3><a href="https://www.linkedin.com/in/awcrosby" target="_blank">linkedin.com/in/awcrosby</a></h3>
+                            <!-- <h3>(###) - ###-###</h3> -->
+                        </div>
+                        <!--// .contact-info -->
+                    </div>
+                </div>
+                <!--// .yui-gc -->
+            </div>
+            <!--// hd -->
+
+            <div id="bd">
+                <div id="yui-main">
+                    <div class="yui-b">
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Profile</h2>
+                            </div>
+                            <div class="yui-u">
+                                <p class="enlarge">
+                                    Software developer with broad IT experience: requirements, coding, product owner, managing devs/testers, running builds, client interaction. Discovered that my passion is with coding and currently building up my skills. Goal: to build deep coding skills on a dev team.
+                                </p>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Profile -->
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Projects</h2>
+                            </div>
+                            <div style="clear: both; padding: 10px 0px 5px 0px;">
+                              <!-- Technical projects I have worked on, and type of work involved: -->
+                            </div>
+                            <div class="yui-u proj-table">
+                                <table>
+                                    <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <th colspan="5">Role: Requirements work, Development, Testing, Project Manager</th>
+                                    </tr>
+                                    <tr>
+                                      <th>Year</th> <th>Project Name</th>
+                                      <th class="role">Req</th>
+                                      <th>Dev</th>
+                                      <th class="role">Test</th>
+                                      <th class="role">PM</th>
+                                      <th>Other Technologies</th>
+                                    </tr>
+                                    <tr v-for="project in projects">
+                                      <td>{{project['year']}}</td>
+                                      <td>{{project.desc}}</td>
+                                      <td class="center-check">
+                                        <img v-if="Object.keys(project.req).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                      </td>
+                                      <td>
+                                        <img v-if="Object.keys(project.dev).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                        <span v-for="item in project.dev">{{item}} </span>
+                                      </td>
+                                      <td class="center-check">
+                                        <img v-if="Object.keys(project.test).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                      </td>
+                                      <td class="center-check">
+                                        <img v-if="Object.keys(project.pm).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                      </td>
+                                      <td>{{project.other}}</td>
+                                        <!-- <td v-for="(value, key) in project">
+                                          <span v-if="key.startsWith('check')">
+                                            <img v-if="Object.keys(value).length !== 0" class="icon" src="img/checkmark-16.png" alt="check mark" />
+                                            <span v-for="item in value">{{item}} </span>
+                                          </span>
+                                          <span v-else>
+                                            {{value}}
+                                          </span>
+                                        </td> -->
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Projects -->
+
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Education</h2>
+                            </div>
+                            <div class="yui-u">
+                              <div class="edu">
+                                <h2>University of Virginia - BS Electrical Engineering</h2>
+                                <p>Concentration in Digital Systems, included CS courses: Software Dev Methods (C++), Computer Architecture (assembly), Computer Organization & Design, Software Engineering
+                                </p>
+                              </div>
+                            </div>
+                            <div class="yui-u">
+                              <div class="edu slim-last">
+                                <h2>North Carolina State University - Continuing Ed</h2>
+                                <p>Courses included: Data​ ​Structures​ & ​Algorithms (Java), Computer Networks, Technology Entrepreneurship, Change Management for Engineers
+                                </p>
+                              </div>
+                            </div>
+                        </div>
+                        <!--// .yui-gf Education -->
+
+
+                        <!-- <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Skills</h2>
+                            </div>
+                            <div class="yui-u">
+                                <div class="talent">
+                                  <h2>Topic</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                </div>
+
+                                <div class="talent">
+                                  <h2>Topic</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                </div>
+
+                                <div class="talent">
+                                  <h2>Topic</h2>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="yui-gf">
+                            <div class="yui-u first">
+                                <h2>Technologies</h2>
+                            </div>
+                            <div class="yui-u">
+                                <ul class="talent">
+                                    <li>Python</li>
+                                    <li>Flask</li>
+                                    <li>VueJS</li>
+                                    <li class="last">Linux Ubuntu</li>
+                                </ul>
+
+                                <ul class="talent">
+                                    <li>MongoDB</li>
+                                    <li>Django</li>
+                                    <li>Celery</li>
+                                    <li class="last">Bootstrap</li>
+                                </ul>
+
+                                <ul class="talent">
+                                    <li>Ansible</li>
+                                    <li>git</li>
+                                    <li>Splunk</li>
+                                    <!-- <li>Vagrant</li> -->
+                                    <li class="last">REST</li>
+                                </ul>
+
+                                <ul class="talent">
+                                    <li>PostgreSQL</li>
+                                    <li>JIRA</li>
+                                    <li>Nginx/Gunicorn</li>
+                                    <!-- <li>vim/tmux</li> -->
+                                    <!-- <li>Linux Command Line</li> -->
+                                    <li class="last">AWS</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <!--// .yui-gf-->
+
+                        <div class="yui-gf slim-last">
+
+                            <div class="yui-u first">
+                                <h2>Experience</h2>
+                            </div>
+                            <!--// .yui-u -->
+
+                            <div class="yui-u">
+
+                                <div class="job">
+                                    <h2>Software​ ​Developer</h2>
+                                    <h3>Self-Study</h3>
+                                    <h4>Feb 2017 - Present</h4>
+                                    <p>
+                                        Studying​ ​computer​ ​programming​ ​courses​ ​to​ ​supplement​ ​my​ ​university​ ​dev​ ​classes​.​ ​ Focusing​ ​on​ back-end development... Python, deep-learning, scripting, integration with 3rd-party APIs, adding AJAX updates. Using Coursera, Udacity, Udemy, turtorials, blogs.
+                                    </p>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Technical Project​ ​Manager​</h2>
+                                    <h3>​Johns​ ​Hopkins​ ​Medicine</h3>
+                                    <h4>Mar 2015 - Sep 2016</h4>
+                                    <ul>
+                                      <li>Assisted in roll-out of EMR System, Desktop Integration, & Voice Recognition App</li>
+                                      <li>As a "hands-on" PM, I went beyond task-tracking to get involved on the technical side</li>
+                                      <li>Interviewed end-users for technical needs</li>
+                                      <li>Maintained test environments for integration</li>
+                                      <li>Troubleshot new vendor builds</li>
+                                      <li>Coordinate​d production install ​across​ all teams (VM, Desktop, Cloud, Network Security, LDAP, SSO, devs, vendor)</li>
+                                      <li>Production troubleshooting on go-live</li>
+                                    </ul>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Product Owner + Devops</h2>
+                                    <h3>itMD</h3>
+                                    <h4>Jun 2013 - Dec 2015</h4>
+                                    <ul>
+                                      <li>Owned the test/build/release process, made bash script to automate upgrades</li>
+                                      <li>Spec'd new features with customers, management, and devs</li>
+                                      <li>Created test cases, docs, and configured JIRA for issue workflow</li>
+                                      <li>Created SQL queries for metrics</li>
+                                      <li>Introduced Splunk to analyze and monitor logs</li>
+                                      <li>Tested features, log analysis of java web app for bugs</li>
+                                    </ul>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Product Owner + Devops</h2>
+                                    <h3>Johns​ ​Hopkins​ ​Medicine</h3>
+                                    <h4>Aug 2011 - June 2013</h4>
+                                    <ul>
+                                      <li>Built-out Image Sharing site for hospital to receive and transfer medical images</li>
+                                      <li>Coordinated maintenance of our production and test environments</li>
+                                      <li>Troubleshot application and environment issues</li>
+                                      <li>Vendor assessment across 5 companies for web application</li>
+                                      <li>Designed workflow enhancements, release planning, maintained feature roadmap</li>
+                                    </ul>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Web Developer</h2>
+                                    <h3>Freelance</h3>
+                                    <h4>Nov 2010 - Aug 2011</h4>
+                                    <ul>
+                                      <li>E-commerce PrestaShop CMS site for wine retailer</li>
+                                      <li>Google Map integration into custom PHP site for food delivery startup</li>
+                                      <li>Static marketing sites (custom, Drupal) for taxi and office advertising businesses</li>
+                                    </ul>
+                                </div>
+
+                                <div class="job">
+                                    <h2>Consultant</h2>
+                                    <h3>Accenture</h3>
+                                    <h4>Feb 2006 - Nov 2010</h4>
+                                    <ul>
+                                      <li>Led requirement gathering effort for the 2010 US Census mobile app deployed to 120,000 devices</li>
+                                      <li>Worked closely with devs to understand technical complexity and limitations</li>
+                                      <li>Ran team of 3 direct reports for functional testing</li>
+                                      <li>Part of end-to-end deployment of 4 year solution - from prototype to implementation to field testing to live production support</li>
+                                      <li>Created strategy reports for useage/deployment/security of smart phone and tablets for clients in Telecom, Pharma, and Consumer Products</li>
+                                      <li>Specified mobile solution for data-capture by Nurses for dialysis patients</li>
+                                    </ul>
+                                </div>
+
+                                <div class="job slim-last">
+                                    <h2>Software Developer</h2>
+                                    <h3>Accenture</h3>
+                                    <h4>Jan 2005 - Feb 2006</h4>
+                                    <ul>
+                                      <li>Developer for business logic and front-end of native Windows smartphone app</li>
+                                      <li>Integrated with custom data-access layer. C# .NET and Sybase database</li>
+                                      <li>Helped define mapping API, integrated survey app with embedded mapping app</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--// .yui-u -->
+                        </div>
+                        <!--// .yui-gf -->
+
+
+                    </div>
+                    <!--// .yui-b -->
+                </div>
+                <!--// yui-main -->
+            </div>
+            <!--// bd -->
+
+            <div id="ft">
+                <p>Andrew Crosby &mdash; <a href="mailto:andrew@awctech.com">andrew@awctech.com</a></p>
+            </div>
+            <!--// footer -->
+
+        </div>
+        <!-- // inner -->
+    </div>
+
+    <script type="text/javascript">
+      new Vue({
+        el: '#doc2',
+        data: {
+          projects: []
+        },
+        mounted() {
+            // force MIME type for getting local json
+            $.ajaxSetup({beforeSend: function(xhr) {
+              if (xhr.overrideMimeType) {
+                xhr.overrideMimeType("application/json");
+              }
+            }
+            });
+
+            var self = this;  // closure to access instance in callback
+            $.getJSON("projects.json", function(data) {
+              self.projects = data;
+            });
+        }
+      })
+    </script>
+
+</body>
+
+</html>
