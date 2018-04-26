@@ -99,5 +99,6 @@ p.enlarge { padding-right: 2em; }
 th.role { width: 40px; }
 
 @media print {
-  #inner { border: 0; }
+  #inner { border: none; }
+  #pdf-div { display: none; }
 }

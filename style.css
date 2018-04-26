@@ -39,7 +39,7 @@ iframe { height: auto; width: 950px; display: block; }
   #projects article img { width: 400px; height: 300px;}
 }
 
-footer { min-height: 40px; }
+footer { margin: 40px 0px; text-align: center; }
 
 
 /* ////////////////////////////////////////// */
