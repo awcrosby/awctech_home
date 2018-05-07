@@ -99,6 +99,8 @@ p.enlarge { padding-right: 2em; }
 th.role { width: 40px; }
 
 @media print {
-  #inner { border: none; }
+  #inner { border: none; padding-top: 0; }
   #pdf-div { display: none; }
+  #hd { margin-top: 0; }
+  .yui-gf { padding-bottom: 1em; margin-bottom: 1em; }
 }
