@@ -1,0 +1,2 @@
+[myhost]
+host1 ansible_ssh_host=<server_ip_address>

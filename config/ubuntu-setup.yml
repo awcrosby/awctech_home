@@ -1,0 +1,47 @@
+---
+# This playbook does general setup on an ubuntu server with root ssh access
+
+# execute this as user root: # ansible-playbook -i hosts -u root ubuntu-setup.yml
+
+- hosts: all
+  vars:
+    ubuntu_user_name: ubuntu
+    debian_packages:
+      - ufw
+      - fail2ban
+      - unattended-upgrades
+      - logwatch
+  # vars_prompt:
+  #   - name: ubuntu_user_password
+  #     prompt: What is value for ubuntu_user_password?
+
+  tasks:
+    # - name: Add regular user, add to sudoers list
+    #   user:
+    #     name: "{{ ubuntu_user_name }}"
+    #     password: "{{ ubuntu_user_password | password_hash('sha512') }}" 
+    #     shell: /bin/bash
+    #     groups: sudo
+    #     append: yes
+
+    - name: Enable ssh access for regular user
+      copy:
+        remote_src: yes
+        src: /root/.ssh/
+        dest: /home/{{ ubuntu_user_name }}/.ssh/
+        owner: "{{ ubuntu_user_name }}"
+        group: "{{ ubuntu_user_name }}"
+
+    - name: Update package list, then upgrades packages
+      apt: upgrade=dist update_cache=yes cache_valid_time=3600
+
+    - name: Install latest version of packages
+      package: name="{{ item }}" state=latest
+      with_items: "{{ debian_packages }}"
+
+    - name: Turn on ufw firewall to deny all incoming traffic
+      ufw: state=enabled policy=deny direction=incoming
+
+    # TODO: restrict this to a port
+    - name: Configure ufw to allow ssh traffic restricted to port
+      ufw: rule=allow name=OpenSSH
