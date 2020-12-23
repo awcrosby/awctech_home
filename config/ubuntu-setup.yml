@@ -2,8 +2,7 @@
 # This playbook does general setup on an ubuntu server with root ssh access
 
 # execute this as user root: # ansible-playbook -i hosts -u root ubuntu-setup.yml
-
-# TODO: if add become: true, will it allow run as root or regular user?
+# aferwards connect via  $ ssh <ip> -p <ubuntu_ssh_port> -l <ubuntu_user_name>
 
 - hosts: all
   vars:
@@ -13,24 +12,24 @@
       - ufw
       - unattended-upgrades
       - update-notifier-common
-  # vars_prompt:
-  #   - name: ubuntu_user_password
-  #     prompt: What is the value for ubuntu_user_password?
-  #   - name: ubuntu_ssh_port
-  #     prompt: What is the value for ubuntu_ssh_port?
+  vars_prompt:
+    - name: ubuntu_user_password
+      prompt: What is the value for ubuntu_user_password?
+    - name: ubuntu_ssh_port
+      prompt: What is the value for ubuntu_ssh_port?
 
   handlers:
     - name: Restart ssh
       service: name=ssh state=restarted
 
   tasks:
-    # - name: Add regular user, add to sudoers list
-    #   user:
-    #     name: "{{ ubuntu_user_name }}"
-    #     password: "{{ ubuntu_user_password | password_hash('sha512') }}" 
-    #     shell: /bin/bash
-    #     groups: sudo
-    #     append: yes
+    - name: Add regular user, add to sudoers list
+      user:
+        name: "{{ ubuntu_user_name }}"
+        password: "{{ ubuntu_user_password | password_hash('sha512') }}"
+        shell: /bin/bash
+        groups: sudo
+        append: yes
 
     - name: Enable ssh access for regular user
       copy:
@@ -53,17 +52,15 @@
     - name: Turn on ufw firewall to deny all incoming traffic
       ufw: state=enabled policy=deny direction=incoming
 
-    # - name: Configure ufw to allow ssh traffic restricted to port
-    #   ufw: rule=allow to_port={{ ubuntu_ssh_port }} proto=tcp
+    - name: Configure ufw to allow ssh traffic restricted to port
+      ufw: rule=allow to_port={{ ubuntu_ssh_port }} proto=tcp
 
-    # TODO: configure fail2ban or leave as-is?
-
-    # - name: Change ssh port
-    #   lineinfile: dest=/etc/ssh/sshd_config
-    #               regexp="^Port\s"
-    #               line="Port {{ ubuntu_ssh_port }}"
-    #               state=present
-    #   notify: Restart ssh
+    - name: Change ssh port
+      lineinfile: dest=/etc/ssh/sshd_config
+                  regexp="^Port\s"
+                  line="Port {{ ubuntu_ssh_port }}"
+                  state=present
+      notify: Restart ssh
 
     - name: Disallow password authentication
       lineinfile: dest=/etc/ssh/sshd_config
@@ -72,9 +69,9 @@
                   state=present
       notify: Restart ssh
 
-    # - name: Disallow root SSH access
-    #   lineinfile: dest=/etc/ssh/sshd_config
-    #               regexp="^PermitRootLogin"
-    #               line="PermitRootLogin no"
-    #               state=present
-    #   notify: Restart ssh
+    - name: Disallow root SSH access
+      lineinfile: dest=/etc/ssh/sshd_config
+                  regexp="^PermitRootLogin"
+                  line="PermitRootLogin no"
+                  state=present
+      notify: Restart ssh
